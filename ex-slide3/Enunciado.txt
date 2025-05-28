@@ -1,0 +1,4 @@
+Atividade 03: Passagem de parâmetro
+
+Os alunos deverão acessar o material de aula 03 - Ponteiros e Alocação Dinâmica, testar os códigos dos slides15 a 21 e 24 a 25 (implementar eles em C e apresentar os resultados - pode ser print da tela). 
+Além disso, terão que resolver a atividade do slide 28 (Vetor Dinâmico) no papel (tirar foto do código).

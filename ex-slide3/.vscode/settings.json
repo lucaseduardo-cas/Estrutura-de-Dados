@@ -1,0 +1,12 @@
+// settings.json
+{
+    "files.encoding": "utf8",
+    "files.autoSave": "onFocusChange",
+    "editor.tabSize": 4,
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "code-runner.executorMap": {
+      "cpp": "cd $dir && g++ -std=c++17 -finput-charset=UTF-8 -fexec-charset=UTF-8 $fileName -o output/$fileNameWithoutExt && ./output/$fileNameWithoutExt"
+    },
+    "C_Cpp.default.configurationProvider": "ms-vscode.cpptools",
+    "C_Cpp.intelliSenseEngine": "Default"
+  }
