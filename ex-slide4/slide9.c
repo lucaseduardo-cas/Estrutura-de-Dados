@@ -15,18 +15,18 @@ número e saldo que suporte as as seguintes operações:
 typedef struct { // typedef permite que você use conta_bancaria diretamente como tipo de variável (sem precisar escrever struct conta_bancaria toda vez).
     int numero;
     float saldo;
-} conta_bancaria;
+} Conta;
 
-void iniciar_conta(conta_bancaria *conta, int numero, float saldo_inicial) { // *conta é um ponteiro que aponta para uma variável do tipo conta bancária.
+void iniciar_conta(Conta *conta, int numero, float saldo_inicial) { // *conta é um ponteiro que aponta para uma variável do tipo conta bancária.
     conta->numero = numero; // Operador -> acessa os campos da struct apontada
     conta->saldo = saldo_inicial;
 }
 
-void depositar(conta_bancaria *conta, float valor) {
+void depositar(Conta *conta, float valor) {
     conta->saldo += valor;
 }
 
-void sacar(conta_bancaria *conta, float valor) {
+void sacar(Conta *conta, float valor) {
     if (valor <= conta->saldo) {
         conta->saldo -= valor;
     } else {
@@ -34,29 +34,29 @@ void sacar(conta_bancaria *conta, float valor) {
     }
 }
 
-void imprimir_saldo(conta_bancaria conta) {
+void imprimir_saldo(Conta conta) {
     printf("Saldo da conta %d: R$%.2f\n", conta.numero, conta.saldo);
 }
 
 int main (void) {
-    conta_bancaria Conta;
+    Conta contaBancaria;
     float saldo_inicial, valor_deposito, valor_saque;
 
-    printf("Digite o número da conta:");
-    scanf("%d", &Conta.numero);
-    printf("Digite o saldo da conta: R$");
+    printf("Digite o número da conta: ");
+    scanf("%d", &contaBancaria.numero);
+    printf("Digite o saldo da conta: R$ ");
     scanf("%f", &saldo_inicial);
-    iniciar_conta(&Conta, Conta.numero, saldo_inicial);
+    iniciar_conta(&contaBancaria, contaBancaria.numero, saldo_inicial);
 
     printf("Valor para depósito: R$");
     scanf("%f", &valor_deposito);
-    depositar(&Conta, valor_deposito);
+    depositar(&contaBancaria, valor_deposito);
 
     printf("Valor para saque: R$");
     scanf("%f", &valor_saque);
-    sacar(&Conta, valor_saque);
+    sacar(&contaBancaria, valor_saque);
 
-    imprimir_saldo(Conta);
+    imprimir_saldo(contaBancaria);
 
     return 0;
 }
