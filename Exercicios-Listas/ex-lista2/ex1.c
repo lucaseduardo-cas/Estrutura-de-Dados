@@ -9,7 +9,7 @@ int main () {
     x = 4;
     (*p)++;
     --x;
-    (*p) += x;
+    (*p) += x; // p = p + x;
 
     printf("x=%d y=%d *p=%d\n\n\n", x, y, *p);
 }

@@ -1,7 +1,7 @@
 /*
-1. Leia um vetor de 12 posições e em seguida ler também dois valores X e Y
-quaisquer correspondentes a duas posições no vetor. Ao final seu programa
-deverá escrever a soma dos valores encontrados nas respectivas posições X e Y.
+1. Leia um vetor de 12 posiÃ§Ãµes e em seguida ler tambÃ©m dois valores X e Y
+quaisquer correspondentes a duas posiÃ§Ãµes no vetor. Ao final seu programa
+deverÃ¡ escrever a soma dos valores encontrados nas respectivas posiÃ§Ãµes X e Y.
 */
 
 #include <stdio.h>
@@ -16,9 +16,9 @@ int main (void) {
     int x, y;
     int i;
 
-    printf("Leia um vetor de 12 posições:\n");
+    printf("Leia um vetor de 12 posiÃ§Ãµes:\n");
     for (i = 0; i < 12; i++) {
-        printf("%2d° posição: ", i + 1);
+        printf("%2dÂ° posiÃ§Ã£o: ", i + 1);
         scanf("%d", &vetor[i]);
     }
     
@@ -26,7 +26,7 @@ int main (void) {
         printf("\n\nDigite o valor de X: ");
         scanf("%d", &x);
         if (x < 1 || x > 12) {
-            printf("Posição inválida. Tente novamente.\n");
+            printf("PosiÃ§Ã£o invÃ¡lida. Tente novamente.\n");
         } else {
             break;
         }
@@ -35,7 +35,7 @@ int main (void) {
         printf("Digite o valor de Y: ");
         scanf("%d", &y);
         if (y < 1 || y > 12) {
-            printf("Posição inválida. Tente novamente.\n");
+            printf("PosiÃ§Ã£o invÃ¡lida. Tente novamente.\n");
         } else {
             break;
         }
@@ -45,7 +45,7 @@ int main (void) {
 
     somaPosicoes = (vetor[x]) + (vetor[y]);
 
-    printf("\n\nSoma nas posições %d e %d do vetor ", x, y);
+    printf("\n\nSoma nas posiÃ§Ãµes %d e %d do vetor ", x, y);
     for (i = 0; i < 12; i++) {
         printf("%2d; ", vetor[i]);
     }
