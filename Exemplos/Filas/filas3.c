@@ -26,8 +26,8 @@ void enfilera (Fila *f, int A) {
         exit(1);
     }
     f->elementos [f->fim] = A;
-    f->fim += 1;
-    f->nItens+=1;
+    f->fim++;
+    f->nItens++;
     if(f->fim == MAX) {
         f->fim = 0;
     }
@@ -40,8 +40,8 @@ int desenfilera (Fila *f) {
         exit(1);
     }
     valor = f->elementos[f->inicio];
-    f->inicio += 1;
-    f->nItens-=1;
+    f->inicio++;
+    f->nItens--;
     if(f->inicio == MAX) {
         f->inicio = 0;
     }

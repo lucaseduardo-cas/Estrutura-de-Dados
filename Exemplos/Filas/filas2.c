@@ -2,7 +2,7 @@
 Supondo a seguinte fila:
    0     1     2     3     4
 +-----+-----+-----+-----+-----+
-|     |     | 3.2 | 3.0 | 7.3 |
+|     |     | 3.2 | 3.4 | 7.3 |
 +-----+-----+-----+-----+-----+
                ^     ^
                |     |
@@ -41,10 +41,10 @@ basta apontar o último elemento ao primeiro:
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX 10
+#define MAX 5
 
 typedef struct {
-    int elementos[MAX];
+    float elementos[MAX];
     int primeiro;   // índice de remoção
     int ultimo;     // índice de inserção
     int qtd;        // controle de quantidade (necessário p/ detectar cheia/vazia)
@@ -77,7 +77,7 @@ void enfilera(Fila *f, int a) {
         return;
     }
     f->elementos[f->ultimo] = a;
-    f->ultimo += 1;
+    f->ultimo++;
     if (f->ultimo == MAX) {
         f->ultimo = 0;
     }
@@ -91,7 +91,7 @@ int desenfilera(Fila *f) {
         return -1;
     }
     int r = f->elementos[f->primeiro];
-    f->primeiro += 1;
+    f->primeiro++;
     if (f->primeiro == MAX) {
         f->primeiro = 0;
     }
@@ -103,7 +103,7 @@ void imprimeFila(Fila *f) {
     printf("\nFila: ");
     int i = f->primeiro;
     for (int c = 0; c < f->qtd; c++) {
-        printf("%d ", f->elementos[i]);
+        printf("%.1f ", f->elementos[i]);
         i = (i + 1) % MAX;
     }
     printf("\n");
@@ -114,7 +114,7 @@ void destroiFila(Fila *f) {
 }
 
 int main(void) {
-    int valor;
+    float valor;
     char funcao;
     Fila *minhaFila = cria();
 
@@ -130,13 +130,13 @@ int main(void) {
         switch (funcao) {
             case 'e':
                 printf("\nDigite um valor a ser enfileirado: ");
-                scanf("%d", &valor);
+                scanf("%f", &valor);
                 enfilera(minhaFila, valor);
                 break;
             case 'd':
                 valor = desenfilera(minhaFila);
                 if (valor != -1)
-                    printf("\nO valor desenfileirado é: %d\n", valor);
+                    printf("\nO valor desenfileirado é: %.1f\n", valor);
                 break;
             case 'i':
                 imprimeFila(minhaFila);

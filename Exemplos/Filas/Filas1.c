@@ -26,7 +26,7 @@ void enfilera(Fila *f, int numero) {
         exit(1);
     }
     f->elementos[f->fim] = numero;
-    f->fim = f->fim+1;
+    f->fim++;
 }
 
 int desenfilera(Fila *f) {
@@ -36,7 +36,7 @@ int desenfilera(Fila *f) {
         exit(1);
     }
     r = f->elementos[f->inicio];
-    f->inicio = f->inicio+1;
+    f->inicio++;
     return r;
 }
 
@@ -54,7 +54,7 @@ int main(void) {
         printf("\nDigite:\n");
         printf("   (e) para enfileirar\n");
         printf("   (d) para desenfileirar\n");
-        printf("   (f) para enfileirar\n");
+        printf("   (f) para sair\n");
         printf("Opção: ");
         scanf(" %c", &funcao);
 
