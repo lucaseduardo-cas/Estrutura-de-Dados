@@ -23,28 +23,14 @@ int main(void) {
     int resultado;
     char opcao;
 
-    while(1) {
-        system("clear");
-        printf("Digite um número inteiro: ");
-        scanf("%d", &n);
+    printf("Digite um número inteiro: ");
+    scanf("%d", &n);
         
-        if (n < 0) {
-            printf("Erro! O fatorial não é definidoo para números negativos.");
-            printf(" Deseja sair? (S/n)\n");
-            printf("Opção: ");
-            scanf(" %c", &opcao);
-            if (opcao == 's') {
-                break;
-            } else {    
-                continue;
-            }
-        }
-        resultado = funcaoFatorial(n);
-        printf("O fatorial de %d é: %d\n\n", n, resultado);
-        printf("Deseja continuar? (S/n)\n");
-        printf("Opção: ");
-        scanf(" %c", &opcao);
-        limpar_buffer();
+    if (n < 0) {
+        printf("Erro! O fatorial não é definidoo para números negativos. ");
     }
+    resultado = funcaoFatorial(n);
+    printf("O fatorial de %d é: %d\n\n", n, resultado);
+    
     return 0;
 }
