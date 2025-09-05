@@ -1,21 +1,12 @@
 /*
-Sequencia de Fibonacci
+2) Faça uma função recursiva que calcule e retorne o N-ésimo termo da sequência 
+Fibonacci. Alguns números desta sequência são: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89... 
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int fibonacci (int n) {
-    if (n == 0) return 0; // Caso base 1
-    if (n == 1) return 1; // Caso base 2
-    return fibonacci (n - 1) + fibonacci(n - 1); // Passo recursivo
-}
-
 int main(void) {
-    int termos = 10;
-    printf("SequÃªncia de Fibonacci atÃ© %d termos:\n", termos);
-    for (int i = 0; i < termos; i++) {
-        printf("%4d\n", fibonacci(i));
-    }
+
     return 0;
 }
