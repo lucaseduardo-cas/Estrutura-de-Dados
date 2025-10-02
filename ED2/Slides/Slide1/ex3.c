@@ -59,4 +59,3 @@ int main (void) {
     printf("O MDC de %d e %d é: %d\n", x, y, funcaoMDC(x, y));
     return 0;
 }
-

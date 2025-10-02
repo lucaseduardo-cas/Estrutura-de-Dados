@@ -41,7 +41,7 @@ void hanoi(int n, char origem, char destino, char auxiliar) {
     hanoi(n - 1, auxiliar, destino, origem);
 }
 
-int main() {
+int main(void) {
     int n;
 
     printf("Digite o numero de discos: ");

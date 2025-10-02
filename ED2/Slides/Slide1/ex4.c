@@ -25,7 +25,7 @@ void inverterString(char str[], int n) {
     printf("%c", str[n]); // imprimir caractere após a chamada recursiva
 }
 
-int main() {
+int main(void) {
     char palavra[] = "Universidade";
 
     printf("Palavra Original: %s\n", palavra);

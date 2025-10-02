@@ -18,7 +18,7 @@ int somaVetor(int vetor[], int tamanho) {
     // Soma o último elemento com o restante
 }
 
-int main() {
+int main(void) {
     int v[] = {1, 2, 3, 4, 5};
     int tamanho = 5;
     
