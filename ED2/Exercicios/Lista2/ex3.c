@@ -1,35 +1,8 @@
 /*
-Exercício 3 – Contar os dígitos de um número
-Escreva uma função recursiva que receba um número inteiro e retorne
-quantos dígitos ele possui.
+3. Ordenação por Inserção (Insertion Sort)
+Um sistema de biblioteca precisa organizar os anos de publicação dos livros 
+em ordem crescente. Implemente um programa em C que utilize o Insertion Sort 
+para ordenar um vetor de inteiros representando os anos de publicação. Exiba 
+o vetor antes e depois da ordenação. Compare o tempo de execução com o algoritmo 
+do MergeSort, e diga qual é o melhor algoritmo nesse cenário.
 */
-
-#include <stdio.h>
-#include <stdlib.h>
-
-int contaDigitos(int n) {
-    if (n < 0) {
-        n = -n;
-    }
-    if (n < 10) {
-        return 1;
-    }
-    return 1 + contaDigitos(n / 10);
-}
-
-int main(void) {
-    int numero;
-    int resultado;
-
-    printf("Digite um numero inteiro: ");
-    scanf("%d", &numero);
-    
-    if (numero == 0) {
-        printf("O numero de digitos e: 1\n");
-    } else {
-        resultado = contaDigitos(numero);
-        printf("O numero de digitos e: %d\n", resultado);
-    }
-
-    return 0;
-}
