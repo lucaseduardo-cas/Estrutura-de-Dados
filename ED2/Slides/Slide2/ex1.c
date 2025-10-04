@@ -21,7 +21,7 @@ void selectionSort(int arr[], int n) {
             min = i; // assume que o menor está na posição i
         for (j = i + 1; j < n; j++) {
             if (arr[j] < arr[min]) {
-            min = j; // atualiza o índice do menor valor
+                min = j; // atualiza o índice do menor valor
             }
         }   
         // troca o menor valor encontrado com o valor na posição i
